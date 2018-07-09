@@ -1,0 +1,85 @@
+---
+title: "IntroR"
+author: "Liliana Lopez-Kleine"
+date: "28 de noviembre de 2017"
+output: html_document
+---
+
+This is a brief introduction on basic data manipulation and on how to perform basic statistical analysis using R.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+R is an open source program and has many contributors
+```{r }
+licence()
+contributors()
+```
+
+
+This command stands for get working directory and gives you the directory in which R is currently working (where it will search for the files you upload or where it will save everything)
+```{r }
+getwd()
+```
+For this tutorial to work you should change it to the folder Rarchivos. You can use the command or do it via clicks (in Rstudio it will be Session - Set working directory - choose directory)
+```{r }
+setwd("~/BioestadisticaGeneral/R/Rarchivos")
+```
+
+Knitr, by default, looks in the same directory as your .Rmd file to find any files you need to draw in, like data sets or script files. You cannot use setwd() with knitr, so the way to do this is to include an initial code chunk:
+```{r "setup", include=FALSE}
+require("knitr")
+opts_knit$set(root.dir = "~/BioestadisticaGeneral/R/Rarchivos")
+```
+
+If you do not want the code to be printed out in your output document add echo=FALSE as for example:
+
+```{r echo=FALSE}
+getwd()
+```
+
+Now we will start creating simple objects in R:
+```{r }
+w<-1:25
+z <- scan()#Hit enter two times to stop 
+x <- c(3,8,9,6,4,5) 
+w <- 1:10 
+w%in%x
+ind=which(w%in%x)
+wx<-w[ind]
+y <- seq(1, 20, 2) 
+u<-rep(1,7)
+u<-rep(c(1,2),c(3,4))
+t<- rep(c(3,4),c(3,4))
+ut1<-cbind(u,t) #combine columns
+ut2<-rbind(u,t) #combine rows
+class(ut2)
+x <- rnorm(1000, mean = 3, sd = 2) 
+x <- matrix(x, nrow = 10, ncol = 100) 
+class(x)
+x2<-as.data.frame(x)
+class(x2)
+y <- x[3, ] 
+y <- x[, -1] 
+y <- x[x >= 4] 
+
+```
+
+If you know the function name and want to get access to the help page
+
+```{r }
+?matrix
+```
+If you do not know the name of the function use 
+```{r }
+help.search("matrix")
+```
+You can also create a data frame loading up data from other formats as for example txt.
+
+```{r }
+setwd("~/BioestadisticaGeneral/R/Rarchivos")
+```
+```{r }
+read.table("t3var.txt", header=TRUE) 
+```

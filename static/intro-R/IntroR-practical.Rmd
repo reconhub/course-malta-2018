@@ -1,0 +1,409 @@
+---
+title: "IntroR"
+author: "Liliana Lopez-Kleine"
+date: "28 de noviembre de 2017"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+This is a brief introduction on basic data manipulation and on how to perform basic statistical analysis using R.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+R is an open source program and has many contributors
+```{r }
+licence()
+contributors()
+```
+
+
+This command stands for get working directory and gives you the directory in which R is currently working (where it will search for the files you upload or where it will save everything)
+```{r }
+getwd()
+```
+For this tutorial to work you should change it to the folder Rarchivos. You can use the command or do it via clicks (in Rstudio it will be Session - Set working directory - choose directory)
+```{r }
+setwd("~/BioestadisticaGeneral/R/Rarchivos")
+```
+
+
+If you do not want the code to be printed out in your output document add echo=FALSE as for example:
+
+```{r echo=FALSE}
+getwd()
+```
+
+Now we will start creating simple objects in R:
+```{r }
+w<-1:25
+z <- scan()#Hit enter two times to stop 
+x <- c(3,8,9,6,4,5) 
+w <- 1:10 
+w%in%x
+ind=which(w%in%x)
+wx<-w[ind]
+y <- seq(1, 20, 2) 
+u<-rep(1,7)
+u<-rep(c(1,2),c(3,4))
+t<- rep(c(3,4),c(3,4))
+ut1<-cbind(u,t) #combine columns
+ut2<-rbind(u,t) #combine rows
+class(ut2)
+x <- rnorm(1000, mean = 3, sd = 2) 
+x <- matrix(x, nrow = 10, ncol = 100) 
+class(x)
+x2<-as.data.frame(x)
+class(x2)
+y <- x[3, ] 
+y <- x[, -1] 
+y <- x[x >= 4] 
+
+```
+
+If you know the function name and want to get access to the help page
+
+```{r }
+#?matrix
+```
+If you do not know the name of the function use 
+```{r }
+help.search("matrix")
+```
+You can also create a data frame loading up data from other formats as for example txt.
+
+```{r }
+setwd("~/BioestadisticaGeneral/R/Rarchivos")
+```
+```{r }
+read.table("t3var.txt", header=TRUE) 
+```
+
+The table is uploaded but we have not created an object that contains it, to do so and make some descriptions of the variables
+```{r }
+t3var<-read.table("t3var.txt", header=TRUE) 
+summary(t3var)
+```
+```{r }
+plot(t3var$peso, t3var$talla)
+```
+If you want to extract some data you can use boolean operators like "=="
+```{r }
+x <- t3var$talla[t3var$sexo == "h"]
+y <- t3var$peso[t3var$sexo == "h"]
+plot(x, y)
+hist(x)
+hist(y)
+```
+```{r }
+x <- t3var$talla[t3var$sexo == "h"]
+y <- t3var$peso[t3var$sexo == "h"]
+plot(x, y)#plot of men's data
+```
+```{r }
+par(mfrow = c(2, 2))#For plotting more than one plot on the same window
+hist(x)
+hist(y)
+qqnorm(x)# a graphical way of testing adjustment to the normal distribution
+qqnorm(y)
+
+```
+
+Suppose you want to save the men's data. Create a matrix and save it as it is or as a data frame.
+```{r }
+M<-cbind(x,y)
+dput(M, "Mensdata.csv")#use deget("Mensdata.csv") to load again
+write.table(M, "MensdataDF.txt")#Use read.table to load again
+```
+R will recognize numerical data vectors and categorical data vectors as for example sexo of t2var
+
+```{r }
+class(t3var$sexo)
+attach(t3var)#this command allows R to recognize the objects in the data frame
+class(peso)
+```
+If a variable is coded with numbers, there can be a confusion
+```{r }
+sitio<-c(1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0)
+summary(sitio)
+summary(as.factor(sitio))
+sitio<-c(1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,NA,NA,NA)
+summary(as.factor(sitio))
+summary(as.factor(na.omit(sitio)))
+pie(summary(as.factor(na.omit(sitio))))
+barplot(summary(as.factor(na.omit(sitio))))
+barplot(summary(as.factor(na.omit(sitio))), horiz = TRUE, col="blue")
+```
+
+Outlier detection
+```{r }
+boxplot(talla) 
+boxplot.stats(talla)
+ind<-talla==200
+t3var[ind,]
+ind<-talla>=189
+length(ind)
+t3var[ind,]
+
+#Changing the interquartile range to detect extreme outliers
+boxplot(talla,range=3)
+plot(lm(talla ~ 1))
+
+```
+
+```{r }
+#Multivariate outlier detection (here bivariate)
+clmedians<-c(median(t3var$peso),median(t3var$talla))
+mahalanobis(t3var[,2:3],mean(clmedians),cov(t3var[,2:3]))->mahat3var
+#centers are the medians
+length(mahat3var) 
+dim(t3var) 
+boxplot(mahat3var)
+boxplot.stats(mahat3var)
+
+```
+
+
+Now we are going to see how to handle a big data table, a gene expression table, for which an auxiliary annotation variable is available. The aim is to extract genes that are known to be resistance genes.
+```{r }
+tom2<-read.table("base-filtro3-6sept.txt",h=T) #tomato gene expression data
+names(tom2) #in genes.filter the ID of the genes is found
+attach(tom2)
+genesR<-read.table("genes-resist.txt",h=T) #table indicating which genes are resistance genes (1) and which are not (0). 
+dim(genesR)
+names(genesR) #in genes.ori is the ID of all genes
+attach(genesR)
+genes.resistance<-genes.ori[resistance==1] #extracts only names of resistance genes
+length(genes.resistance)
+indres<-which(genes.filter%in%genes.resistance) # finds these genes in the original gene expression table
+genesres<-genes.filter[indres] #names of the resistance genes
+length(genesres)
+tomresist<-tom2[genes.filter[indres],c(15:22)] #extract data of the resistance genes. Only the variables of interest (log2 transformed data)
+dim(tomresist)
+write.table(tomresist,"tomresist.csv")#saves the new table
+```
+Some descriptive statistics
+```{r }
+x<-c(1,2,3,4,5,6,6,7,8,10)
+mean(x)
+var(x)
+sqrt(var(x))
+sd(x)
+median(1:4)
+range(x)
+quantile(x)
+```
+
+Correlation coefficient
+```{r }
+cor(tomresist)#correlation between samples
+cor(tomresist,method="spearman")
+cor.test(tomresist[,1],tomresist[,2])#significance of correlation
+```
+
+A plot of the correlation in library corrplot
+```{r }
+#install.packages("corrplot")
+library(corrplot)
+corM<-cor(tomresist)
+corrplot(corM,method = "circle")#all correlations are very high because they are replicates
+corrplot(corM,method = "square")
+```
+
+Hypothesis testing
+
+T-test
+```{r }
+#?t.test
+t.test(1:10,mu=5) 
+t.test(1:10,y<-c(7:20)) 
+t.test(1:10,y<-c(7:20), var.equal=TRUE) # eliminates the Welch correction on degrees of freedom 
+t.test(1:10,y<-c(7:20, 200))#T test does not work because normality assumption is not met
+wilcox.test(1:10,y<-c(7:20, 200))
+```
+
+Chi-square test for independence
+```{r }
+sexe <- as.factor(rep(c("F", "M"), c(10, 10)))
+examen <- as.factor(c("R", "R", "R", "R", "E", "E", "E","E", "E", "E", "R", "R", "R", "R", "R", "R", "E", "E", "E", "E"))
+table(sexe,examen)
+chisq.test(sexe, examen)
+chisq.test(sexe, examen, correct = FALSE)#only if more than one degree of freedom
+```
+Fisher exact test when frequencies of the contingency table are less than 3
+```{r }
+TeaTasting <-
+matrix(c(3, 1, 1, 3),
+       nrow = 2,
+       dimnames = list(Guess = c("Milk", "Tea"),
+                       Truth = c("Milk", "Tea")))
+fisher.test(TeaTasting, alternative = "greater")
+```
+
+Estimate power of a T test or fix a power and estimate sampling size. d is the effect size as described by Cohen.
+```{r }
+library(pwr)
+
+pwr.t.test(d=0.2,n=60,sig.level=0.10,type="one.sample",alternative="two.sided")
+
+pwr.t.test(d=0.2,power=0.90,sig.level=0.10,type="one.sample",alternative="two.sided")
+
+pwr.t.test(d=0.2,power=0.80,sig.level=0.010,type="one.sample",alternative="two.sided")
+```
+
+Power for analysis of variance
+```{r }
+power.anova.test(groups = 3, n = NULL, between.var = 43715, within.var = 102030, sig.level = 0.05,
+power = 0.8)
+```
+
+Linear Regression
+```{r }
+MicroYprot<-read.table("MicroYProtprom.txt",h=T)
+summary(MicroYprot)#Are there missing values?
+attach(MicroYprot)
+plot(promProt,promMicro)
+```
+
+```{r }
+lmp<-lm(promProt~promMicro)#missing values are not used
+summary(lmp)
+#The quality of the model is very bad
+protpred<-2.2936*promMicro[205]-1.0195#Predicting a missing value
+protpred
+```
+```{r }
+#Testing for assumptions
+#normal distribution of residuals
+plot(lmp) #several plots are displayed
+shapiro.test(lmp$residuals)
+```
+
+```{r }
+#independence
+#install.packages("lmtest")
+library(lmtest)
+dwtest(promProt[1:204]~promMicro[1:204])
+```
+
+Multiple linear regression
+```{r }
+RLM<-read.table("RegrLinealMultiple.txt",h=T)
+RLM
+X<-RLM[1:13,3:5]
+X<-as.matrix(X)
+y<-RLM[1:13,1]
+t(X)
+
+
+lmR<-lm(y~X)
+lmR
+summary(lmR)#this is a good model
+```
+
+Analysis of variance
+```{r }
+dosis<-read.table("dosis.txt",h=T)
+attach(dosis)
+
+bartlett.test(Vigilancia~Dosis)
+
+by(Vigilancia, Dosis, shapiro.test)
+
+
+ks.test(Vigilancia[1:6], "pnorm",mean(Vigilancia[1:6]),sd(Vigilancia[1:6]))#Kolmogorov-Smirnov test for normality
+```
+
+```{r }
+#1 Factor ANOVA
+aov.dosis<- aov(Vigilancia~Dosis,data=dosis)
+summary(aov.dosis)
+
+#Multiple testing
+pairwise.t.test(Vigilancia,Dosis)
+pairwise.t.test(Vigilancia,Dosis,p.adjust="bonf")
+```
+
+```{r }
+#2 Factor ANOVA
+aov.dosis<- aov(Vigilancia~Genero+Dosis,data=dosis)
+summary(aov.dosis)
+aov.dosis<- aov(Vigilancia~Genero+Dosis+Genero*Dosis,data=dosis)
+summary(aov.dosis)
+```
+```{r }
+#Another way of multiple testing 
+TukeyHSD(aov.dosis, "Dosis", ordered = TRUE)
+
+plot(TukeyHSD(aov.dosis, "Dosis"))
+```
+
+If the normality assumption is not met, a 1 Factor ANOVA can be replaced by the non-parametric Kruskal-Wallis test
+```{r }
+kruskal.test(Vigilancia~Dosis,data=dosis)
+```
+
+For the experimental design, in order to assure randomization, the following library can be used
+```{r }
+#install.packages("agricolae")
+library(agricolae)
+trt<-c(3,2) # factorial 3x2 
+outdesign <-design.ab(trt, r=3, serie=2) 
+
+# factorial 2 x 2 x 2 with 5 replications in completely randomized design. 
+trt<-c(2,2,2) 
+outdesign<-design.ab(trt, r=5, serie=2,design="crd") #complete randomized design
+
+# factorial 3 x 3 in latin square design. 
+trt <-c(3,3) 
+outdesign<-design.ab(trt, serie=2, design="lsd") #latin square design
+
+#incomplete blocks
+# 4 treatments and k=3 size block 
+trt<-c("A","B","C","D") 
+k<-3 
+outdesign<-design.bib(trt,k,serie=2,seed =41) # seed = 41 print(outdesign$parameters) 
+#Marsaglia's famous Super-Duper method to generate random numbers as default
+book<-outdesign$book 
+plots <-as.numeric(book[,1]) 
+matrix(plots,byrow=TRUE,ncol=k) 
+print(outdesign$sketch)
+```
+
+Some useful functions
+
+```{r }
+#apply
+	x <- cbind(x1 = 3, x2 = c(4:1, 2:5))
+	dimnames(x)[[1]] <- letters[1:8]
+	#?apply
+	col.sums <- apply(x, 2, sum)
+	col.sums <- apply(x, 1, sum)
+	lapply(x, mean)
+ sapply(x, mean)
+```
+
+Constructing loops
+```{r }
+x12<- c(5,4,3,2)
+	for(i in 1:3){x12[i] <- x12[i] + 1}
+	x12
+	#[1] 6 5 4 2
+	x12 <- x12 + 1
+	for(i in 1:length(x12)){x12[i] <- x12[i] + 1}
+	for(i in 1:length(x12)){if(x12[i] < 4){x12[i] <- x12[i] + 1}}
+
+  	if ( x > 3) { resultado <- "x es mayor de 3"}   # Efectúa la comparación.
+```
+
+```{r }
+#A simple function
+	x<-5
+	f <- function(x) {
+ 	 x^2 + x + 1
+	}
+	f(x)
+```
+
