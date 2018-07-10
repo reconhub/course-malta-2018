@@ -1,6 +1,6 @@
 # Main config file for icon theme.
 theme = "hugo-icon"
-baseURL = "https://unruffled-jepsen-ad1491.netlify.com/"
+baseURL = "https://recon-malta-2018.netlify.com/"
 languageCode = "en-AU"
 title = "RECON and EAN workshop: R for outbreak analytics"
 
@@ -30,7 +30,7 @@ title = "RECON and EAN workshop: R for outbreak analytics"
   video = false
   vidlink = ""
   title = "Agenda"
-  description = "<p>This two-days short course, co-organised by the R Epidemics Consortium (<a href='http://www.repidemicsconsortium.org/'>RECON</a>) and the EPIET Alumni Network (<a href='http://epietalumni.net'>EAN</a>), will provide an introduction to outbreak analysis using the R software. It will take place in the <a href='https://goo.gl/maps/fvyXk52TuQ22'>Mater Dei Hospital</a> Malta, 19-20 March 2018, as a satellite event to the <a href='https://www.escaide.eu/en'>ESCAIDE</a> conference. The workshop will be aimed at people currently undertaking, or having recently completed, a field-epidemiology training programme (FETP), with some interest in epidemics analysis using R. Participants will get an overview and gain practical experience of new packages for outbreak analysis developed by <a href='http://www.repidemicsconsortium.org/'>RECON</a>, including descriptive approaches (epicurves), short-term forecasting, or automated sitrep generation. While the course will be pitched at a beginner level, we strongly recomment that participants revise R basics by completing the free introduction session provided on <a href='https://www.datacamp.com/courses/free-introduction-to-r'>Datacamp</a>. Applications should be sent using the providing form (see 'Register' tab above).</p>"
+  description = "<p>This two-days short course, co-organised by the R Epidemics Consortium (<a href='http://www.repidemicsconsortium.org/'>RECON</a>) and the EPIET Alumni Network (<a href='http://epietalumni.net'>EAN</a>), will provide an introduction to outbreak analysis using the R software. It will take place in the <a href='https://goo.gl/maps/fvyXk52TuQ22'>Mater Dei Hospital</a> Malta, 19-20 March 2018, as a satellite event to the <a href='https://www.escaide.eu/en'>ESCAIDE</a> conference. The workshop will be aimed at people currently undertaking, or having recently completed, a field-epidemiology training programme (FETP), with some interest in epidemics analysis using R. Participants will get an overview and gain practical experience of new packages for outbreak analysis developed by <a href='http://www.repidemicsconsortium.org/'>RECON</a>, including descriptive approaches (epicurves), short-term forecasting, or automated sitrep generation. While the course will be pitched at a beginner level, we strongly recommend that participants revise R basics by completing the free introduction session provided on <a href='https://www.datacamp.com/courses/free-introduction-to-r'>Datacamp</a>. Applications should be sent using the providing form (see 'Register' tab above).</p>"
   # [[params.services.item]]
   #   icon = "icon-present"
   #   title = "Web Development"
@@ -101,7 +101,7 @@ title = "RECON and EAN workshop: R for outbreak analytics"
     name = "register"
     title = "Register"
     subtitle = ""
-    description = '<p>Please <em>use the google form</em> below to apply, or follow <a href="https://goo.gl/forms/q4JPcu8c1BMmInN63">this link</a> to open the form in a new page. Attendance will depend on availability and will be confirmed at a later stage. As soon as participation slots are full, we will close registration. </p><p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDjxHZShQvjplazC-qM_uN2PKOF9akCAkCS7nQujh2wkrLZA/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></p>'
+    description = '<p>Please use the google form below to apply, or follow <a href="https://goo.gl/forms/q4JPcu8c1BMmInN63">this link</a> to open the form in a new page. Attendance will depend on availability and will be confirmed at a later stage. As soon as participation slots are full, new applicants will be added to a reserve list. </p><p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDjxHZShQvjplazC-qM_uN2PKOF9akCAkCS7nQujh2wkrLZA/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></p>'
  
   [[params.mission.item]]
     weight = 4
