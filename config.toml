@@ -1,28 +1,70 @@
 # Main config file for icon theme.
 theme = "hugo-icon"
-baseURL = "https://recon-gathering-March2018.netlify.com"
+baseURL = "https://unruffled-jepsen-ad1491.netlify.com/"
 languageCode = "en-AU"
-title = "RECON gathering"
+title = "RECON and EAN workshop: R for outbreak analytics"
 
 # Metadata
 [params]
-  author = "Thibaut Jombart"
-  description = "Event website for the RECON gathering, London, 22-23 March 2018"
+  author = "Thibaut Jombart & Amrish Baidjoe"
+  description = "Website for the RECON and EAN R for outbreak analytics workshop, Malta, 19-20 November 2018"
 
 # Hero section (from here on is for icon theme)
 [params.hero]
-  img = "images/paddington-basin.jpg"
-  title = "Challenges and opportunities in outbreak analytics"
-  description = "/// RECON gathering #1<br>/// London, Novotel Paddington, 22-23 March 2018"
+  img = "images/malta_edit.jpeg"
+  title = "R for Outbreak Analytis Workshop"
+  description = "///R for Outbreak analytics workshop organised by RECON and EAN<br>/// Malta, Mater Dei Hospital, 19-20 November 2018"
 
 # Navigation section
 [params.nav]
-  mission = "Practical info"
   services = "Agenda"
+  mission = "Practical info"
   team = "Organisers"
   contact = "Register"
   # Include logo instead if HOME:
   # logo = "path/to/logo"
+
+# Services section
+[params.services]
+  enable = true
+  video = false
+  vidlink = ""
+  title = "Agenda"
+  description = "<p>This workshop is a joint effort between <a href='http://www.repidemicsconsortium.org/'>RECON</a> and <a href='http://epietalumni.net'>the EAN</a>. The workshop will focus on the use of the R software package for epidemiological analyses and will be organised right before <a href='https://www.escaide.eu/en'>ESCAIDE</a>. The workshop is aimed at an audience whom have completed Field-Epidemiology training or are currently in the process of completing a FETP or equivalant and are interested in performing their future analyses in R. </p> The content of the workshop is not 100% set yet, allowing us to tailor the training according to the needs of participants. Feedback on this will be requested in the application form.</p><p>The event will be running over 2 days, 19-20 March 2018. The entire workshop will be hosted in the <a href='https://goo.gl/maps/fvyXk52TuQ22'>Mater Dei Hospital</a>.<p></p> For users who are completely unfamiliar with the use of R, we recommend to prepare the basics by completing the free introduction session provided on <a href='https://www.datacamp.com/courses/free-introduction-to-r'>Datacamp</a> or have a look on <a href='https://reconlearn.netlify.com'>RECON learn</a>. As the event approaches we will provide more information on this website and directly to registered participants.</p>"
+  # [[params.services.item]]
+  #   icon = "icon-present"
+  #   title = "Web Development"
+  #   description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident."
+
+  # [[params.services.item]]
+  #  icon = ""
+  #  title = "Registration"
+  #  description = "<p><b>Thursday 22nd March 2018 <br>9:00 - 9:30</b></p><p>Welcoming the participants, coffee.</p>"
+
+  #  [[params.services.item]]
+  #   icon = ""
+  #  title = "Symposium"
+  # description = "<p><b>Thursday 22nd March 2018 <br>9:30 - 17:00</b></p><p>The programme is available <a href='https://recon-gathering-march2018.netlify.com/files/programme.pdf'>here</a>. </p>"
+
+  # [[params.services.item]]
+  #  icon = ""
+  #  title = "Social event"
+  #  description = "<p><b>Thursday 22nd March 2018 <br> 17:30 - 23:00</b></p><p>Reception at the bar of the hotel, followed by dinner.</p>"
+
+  # [[params.services.item]]
+  #  icon = ""
+  #  title = "Parallel session 1"
+  #  description = "<p><b>Friday 23rd March 2018 <br>9:30 - 16:00</b></p><p>Working group on resources for field epidemiology training.</p>"
+
+  # [[params.services.item]]
+  #  icon = ""
+  #  title = "Parallel session 2"
+  #  description = "<p><b>Friday 23rd March 2018 <br>9:30 - 16:00</b></p><p>Community-driven hackathon. Click <a href='https://github.com/RECON-gathering-March-2018/projects'>here</a> to discuss existing projects or propose new ones.</p>"
+
+  # [[params.services.item]]
+  #  icon = ""
+  #  title = "Conclusion"
+  #  description = "<p><b>Friday 23rd March 2018 <br>16:00 - 16:30</b></p><p>Debriefing of parallel sessions and concluding remarks.</p>"
 
 # Mission section
 [params.mission]
@@ -44,14 +86,14 @@ title = "RECON gathering"
     weight = 1
     name = "location"
     title = "Location"
-    subtitle = 'The event will be hosted at the Novotel Paddington, in the middle of little venice, London'
-    description = '<p>Here is a map of the campus:<br><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4965.3659452534275!2d-0.182594!3d51.519032!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6da98aa2acd4015f!2sHotel+Novotel+London+Paddington!5e0!3m2!1sen!2suk!4v1515162861305" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe></p>'
+    subtitle = 'The workshop will be hosted at the Mater Dei Hospital, Malta'
+    description = '<p>Here is a map of the location:<br>"<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3231.845674352555!2d14.474202051114345!3d35.90179518004605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130e45548ca6d317%3A0x9af354451a8f887d!2sMater+Dei+Hospital!5e0!3m2!1sen!2suk!4v1531152876216" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>"</iframe></p>'
 
   [[params.mission.item]]
     weight = 2
     name = "date"
     title = "Date"
-    subtitle = "The event will take place over 2 days, 22-23 March 2018"
+    subtitle = "The event will take place accross two days, Monday the 19th - and Tuesday the 20th of November 2018, exact times will be announced later on"
     description = ""
 
   [[params.mission.item]]
@@ -59,22 +101,22 @@ title = "RECON gathering"
     name = "register"
     title = "Register"
     subtitle = ""
-    description = '<p>Please <em>use the google form</em> below to apply, for follow <a href="https://goo.gl/forms/gwRZ27UuiUTCAlt63">this link</a> to open the form in a new page. Attendance will depend on availability and will be confirmed at a later stage. Deadline for registration is 23rd February 2018.</p><p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdBSa0p8Mkz2BgdssoaD5mul4GbFp0hIw3Tdb7hJTIpH2T1mg/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></p>'
+    description = '<p>Please <em>use the google form</em> below to apply, or follow <a href="https://goo.gl/forms/q4JPcu8c1BMmInN63">this link</a> to open the form in a new page. Attendance will depend on availability and will be confirmed at a later stage, as soon as participation slots are full, we will close registration. </p><p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDjxHZShQvjplazC-qM_uN2PKOF9akCAkCS7nQujh2wkrLZA/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></p>'
  
   [[params.mission.item]]
     weight = 4
     name = "contact"
     title = "Contact"
-    subtitle = "For more information, use the contact provided below."
-    description = "Organisation: <p><ul><li><a href='mailto:thibautjombart@gmail.com'>Thibaut Jombart</a><li><a href='mailto:amrish.baidjoe@gmail.com'>Amrish Baidjoe</a></ul></p>"
+    subtitle = "For more information, use the contact details provided below, for question regarding registration, e-mail EAN."
+    description = "Organisation: <p><ul><li><a href='mailto:eanboard@gmail.com'>EAN Board</a><li><a href='mailto:amrish.baidjoe@gmail.com'>Amrish Baidjoe</a><li><a href='mailto:thibautjombart@gmail.com'>Thibaut Jombart</a></ul></p>"
 
 
   [[params.mission.item]]
     weight = 5
     name = "programme"
     title = "Programme"
-    subtitle = "What is on the menu?"
-    description = "Our programme is finally online! Download the pdf from <a href='https://recon-gathering-march2018.netlify.com/files/programme.pdf'>this link</a>."
+    subtitle = "What is on the menu for this workshop?"
+    description = "The final programme will be announced soon. Depending on the preference of the participants it could include; a short introduction into R, forecasting, GIS analyses in R and automated report generation. (due to limited time available for this workshop we will select a few subjects based on the preference of participants)"
 
 
 # [[params.mission.item]]
@@ -104,49 +146,6 @@ title = "RECON gathering"
 
 
 
-# Services section
-[params.services]
-  enable = true
-  video = false
-  vidlink = ""
-  title = "Agenda"
-  description = "<p>This first <a href='http://www.repidemicsconsortium.org/'>RECON</a> gathering will be dedicated to discussing challenges and opportunities in <em>outbreak analytics</em>. Our objective is to combine the experience and knowledge of field epidemiologists, public health officers, methodologists and software developers to identify future directions and priorities in the development and dissemination of outbreak analytic tools. We will discuss the potential and limitations of statistics and modelling for informing outbreak response, and the role novel tools can play as a component of the next generation of field epidemiology training programmes.</p><p>The event will be running over 2 days, 22-23 March 2018. The full programme is available <a href='https://recon-gathering-march2018.netlify.com/files/programme.pdf'>here</a>. The first day will be a symposium giving an overview of the activities of our community, focussing on the role of modelling and analytics for informing outbreak response. The second day will consist in two parallel sessions, including a working group on field epidemiology training resources, and a community-driven hackathon. Click <a href='https://github.com/RECON-gathering-March-2018/projects'>here</a> to discuss existing projects or propose new ones. The entire event will be hosted in the <a href='https://www.accorhotels.com/gb/hotel-6455-novotel-london-paddington/index.shtml'>Novotel Paddington</a></p>"
-
-  # [[params.services.item]]
-  #   icon = "icon-present"
-  #   title = "Web Development"
-  #   description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam itaque ipsam iste provident quo ipsam iste provident."
-
-  [[params.services.item]]
-    icon = ""
-    title = "Registration"
-    description = "<p><b>Thursday 22nd March 2018 <br>9:00 - 9:30</b></p><p>Welcoming the participants, coffee.</p>"
-
-  [[params.services.item]]
-    icon = ""
-    title = "Symposium"
-    description = "<p><b>Thursday 22nd March 2018 <br>9:30 - 17:00</b></p><p>The programme is available <a href='https://recon-gathering-march2018.netlify.com/files/programme.pdf'>here</a>. </p>"
-
-  [[params.services.item]]
-    icon = ""
-    title = "Social event"
-    description = "<p><b>Thursday 22nd March 2018 <br> 17:30 - 23:00</b></p><p>Reception at the bar of the hotel, followed by dinner.</p>"
-
-  [[params.services.item]]
-    icon = ""
-    title = "Parallel session 1"
-    description = "<p><b>Friday 23rd March 2018 <br>9:30 - 16:00</b></p><p>Working group on resources for field epidemiology training.</p>"
-
-  [[params.services.item]]
-    icon = ""
-    title = "Parallel session 2"
-    description = "<p><b>Friday 23rd March 2018 <br>9:30 - 16:00</b></p><p>Community-driven hackathon. Click <a href='https://github.com/RECON-gathering-March-2018/projects'>here</a> to discuss existing projects or propose new ones.</p>"
-
-  [[params.services.item]]
-    icon = ""
-    title = "Conclusion"
-    description = "<p><b>Friday 23rd March 2018 <br>16:00 - 16:30</b></p><p>Debriefing of parallel sessions and concluding remarks.</p>"
-
  
 
 # # Work section
@@ -172,11 +171,11 @@ title = "RECON gathering"
 [params.team]
   enable = true
   title = "Organisers"
-  description = ""
+  description = "Organising members and facilitators"
 
   [[params.team.item]]
     name = "Thibaut Jombart"
-    position = "Lecturer, Imperial College London"
+    position = "Lecturer, Imperial College London, UK"
     description = "Outbreak response analytics and head of RECON.<br><br>"
     img = "images/thibaut.jpg"
     # dribbble = "#"
@@ -185,29 +184,19 @@ title = "RECON gathering"
 
   [[params.team.item]]
     name = "Amrish Baidjoe"
-    position = "Research Associate, Imperial College London"
-    description = "Field epidemiologist and core RECON member, president of the EPIET alumni network."
+    position = "Research Associate, Imperial College London, UK"
+    description = "Field epidemiologist/microbiologist and coordinator of RECON, president of the EPIET Alumni Network."
     img = "images/amrish.jpg"
-    # facebook = "#"
-    # twitter = "#"
+    github = "https://github.com/AmmerB"
+    twitter = "https://twitter.com/Ammer_B"
 
   [[params.team.item]]
-    name = "Julie Middleton"
-    position = "Senior Administrator, Imperial College London"
-    description = "Administrator of the MRC Centre for Outbreak Analysis and Modelling, and logistics guru for the event.<br><br>"
-    img = "images/julie.jpg"
+    name = "Lieke van Alphen"
+    position = "Molecular Medical Microbiologist, MUMC, NL"
+    description = "Providing logistics support on behalf of EAN, EAN treasurer"
+    img = "images/lieke.jpeg"
 
-  [[params.team.item]]
-    name = "Susannah Fisher"
-    position = "Senior Administrator, Imperial College London"
-    description = "Administrator of the MRC Centre for Outbreak Analysis and Modelling, and logistics oracle for the event."
-    img = "images/susannah.jpg"
-
-  [[params.team.item]]
-    name = "James Hayward"
-    position = "Senior Administrator, Imperial College London"
-    description = "Head administrator for the NIHR-HPRU and occasional logistics life-saver."
-    img = "images/james.jpg"
+#add following members: facilitators, admin support, Chris Barbara
 
  
   # [[params.team.item]]
@@ -231,6 +220,6 @@ title = "RECON gathering"
 # Note here that the copyright and attribution statement must remain as part of the license agreement. If you wish to remove this, please contact freehtml5 and pay for a professional license.
 [params.footer]
   enable = true
-  note = "<p><a href='http://www.repidemicsconsortium.org/'><img src='http://www.repidemicsconsortium.org/img/logo.png' width='300px' alt='R Epidemics Consortium'><br>This event is organised by the R Epidemics Consortium</a></p><p><small>This event is co-funded by the Medical Research Council (MRC) Centre for Outbreak Analysis and Modelling, and the National Institute for Health Research - Health Protection Research Unit (NIHR-HPRU) for Modelling Methodology.</small></p><p><small>&copy; 2016 Free HTML5 Template. All Rights Reserved. Designed by <a href='http://freehtml5.co/' target='_blank'>FreeHTML5.co</a> Hugo port by <a href='https://github.com/SteveLane/' target='_blank'>SteveLane</a>. Website by <a href='https://thibautjombart.netlify.com/'>Thibaut Jombart</a>.</small></p>"
-  github = "https://github.com/reconhub/meeting-march-2018"
+  note = "<p>This event is organised by:<br><a href='http://www.repidemicsconsortium.org/'><img src='http://www.repidemicsconsortium.org/img/logo.png' width='300px' alt='R Epidemics Consortium'><br>the R Epidemics Consortium</a><br><large>&</large><br><a href='http://http://epietalumni.net/'><img src='http://epietalumni.net/wp-content/uploads/2016/06/epietlogo-1.png' width='300px' alt='EPIET Alumni Network'><br>the EPIET Alumni Network</a></p><small>This event is co-funded by the Medical Research Council (MRC) Centre for Outbreak Analysis and Modelling, and the National Institute for Health Research - Health Protection Research Unit (NIHR-HPRU) for Modelling Methodology.</small></p><p><small>&copy; 2016 Free HTML5 Template. All Rights Reserved. Designed by <a href='http://freehtml5.co/' target='_blank'>FreeHTML5.co</a> Hugo port by <a href='https://github.com/SteveLane/' target='_blank'>SteveLane</a>. Website by <a href='https://thibautjombart.netlify.com/'>Thibaut Jombart</a> and Amrish Baidjoe.</small></p>"
+  github = "https://github.com/reconhub/course-malta-2018"
   
