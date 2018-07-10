@@ -18,7 +18,7 @@ body.fh5co-overflow {
 }
 
 a {
-  color: #0c449e;
+  color: #efaf0e;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -65,9 +65,9 @@ p {
 }
 
 .btn-primary {
-  background: #0c449e;
+  background: #efaf0e;
   color: #fff;
-  border: 2px solid #0c449e;
+  border: 2px solid #efaf0e;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #56bac1 !important;
@@ -75,11 +75,11 @@ p {
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #0c449e;
-  border: 2px solid #0c449e;
+  color: #efaf0e;
+  border: 2px solid #efaf0e;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #0c449e;
+  background: #efaf0e;
   color: #fff;
 }
 
@@ -184,7 +184,7 @@ p {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #0c449e;
+  border-color: #efaf0e;
 }
 
 .fh5co-page {
@@ -219,7 +219,7 @@ p {
 #fh5co-home .fh5co-copy-inner h1, #fh5co-home .fh5co-copy-inner h2 {
   margin: 0;
   padding: 0;
-  text-shadow: 0px 0px 20px #0c449e;
+  text-shadow: 0px 0px 15px #efaf0e;
 }
 #fh5co-home .fh5co-copy-inner h1 {
   color: #fff;
@@ -345,7 +345,7 @@ p {
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
-  background: #E8ECF1;
+  background: #fffdf5;
   width: 100%;
 }
 #fh5co-about .fh5co-2col {
@@ -475,8 +475,8 @@ p {
   outline: none;
 }
 .fh5co-tabs-container .fh5co-tabs li.active a {
-  color: #0c449e;
-  border-bottom: 1px solid #0c449e;
+  color: #efaf0e;
+  border-bottom: 1px solid #efaf0e;
 }
 @media screen and (max-width: 480px) {
   .fh5co-tabs-container .fh5co-tabs li {
@@ -525,7 +525,7 @@ p {
   width: 50px;
   height: 50px;
   display: table;
-  background: rgba(0, 0, 0, 0.5);
+  background: #e5a402;
   color: #fff;
   text-align: center;
   -webkit-border-radius: 4px;
@@ -571,7 +571,7 @@ p {
   float: left;
   width: 90px;
   height: 90px;
-  background: #0c449e;
+  background: #efaf0e;
   color: #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -634,7 +634,7 @@ p {
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
-  color: #0c449e;
+  color: #efaf0e;
 }
 #fh5co-services .service:hover, #fh5co-services .service:focus {
   border: 1px solid #e6e6e6;
@@ -702,7 +702,7 @@ p {
 #fh5co-team {
   clear: both;
   padding: 7em 0;
-  background: #E8ECF1;
+  background: #fffdf5;
 }
 @media screen and (max-width: 768px) {
   #fh5co-team {
@@ -805,7 +805,7 @@ p {
   right: 0;
   left: 0;
   z-index: 0;
-  background: #0c449e;
+  background: #efaf0e;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: 0.1s;
@@ -892,19 +892,19 @@ p {
 #fh5co-contact .form-control {
   border: none;
   box-shadow: none;
-  border-bottom: 1px solid #E8ECF1;
+  border-bottom: 1px solid #fffdf5;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0;
 }
 #fh5co-contact .form-control:active, #fh5co-contact .form-control:focus {
-  border-bottom: 1px solid #0c449e;
+  border-bottom: 1px solid #efaf0e;
 }
 
 #fh5co-footer {
   padding: 3em 0;
-  background: #E8ECF1;
+  background: #fffdf5;
   -webkit-box-shadow: inset 0px 10px 21px -15px rgba(0, 0, 0, 0.12);
   -moz-box-shadow: inset 0px 10px 21px -15px rgba(0, 0, 0, 0.12);
   box-shadow: inset 0px 10px 21px -15px rgba(0, 0, 0, 0.12);
@@ -1013,10 +1013,10 @@ p {
 #fh5co-offcanvas a:hover, #fh5co-offcanvas a:focus, #fh5co-offcanvas a:active {
   outline: none;
   text-decoration: none;
-  color: #0c449e;
+  color: #efaf0e;
 }
 #fh5co-offcanvas a.active {
-  color: #0c449e;
+  color: #efaf0e;
 }
 @media screen and (max-width: 768px) {
   #fh5co-offcanvas {
