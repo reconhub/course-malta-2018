@@ -12,8 +12,8 @@ title = "RECON and EAN workshop: R for outbreak analytics"
 # Hero section (from here on is for icon theme)
 [params.hero]
   img = "images/malta_edit.jpeg"
-  title = "R for Outbreak Analytis Workshop"
-  description = "///R for Outbreak analytics workshop organised by RECON and EAN<br>/// Malta, Mater Dei Hospital, 19-20 November 2018"
+  title = "Introduction to outbreak analysis using R"
+  description = "/// Short course on outbreak analytics organised by RECON and EAN<br>/// Malta, Mater Dei Hospital, 19-20 November 2018"
 
 # Navigation section
 [params.nav]
@@ -30,7 +30,7 @@ title = "RECON and EAN workshop: R for outbreak analytics"
   video = false
   vidlink = ""
   title = "Agenda"
-  description = "<p>This workshop is a joint effort between <a href='http://www.repidemicsconsortium.org/'>RECON</a> and <a href='http://epietalumni.net'>the EAN</a>. The workshop will focus on the use of the R software package for epidemiological analyses and will be organised right before <a href='https://www.escaide.eu/en'>ESCAIDE</a>. The workshop is aimed at an audience whom have completed Field-Epidemiology training or are currently in the process of completing a FETP or equivalant and are interested in performing their future analyses in R. </p> The content of the workshop is not 100% set yet, allowing us to tailor the training according to the needs of participants. Feedback on this will be requested in the application form.</p><p>The event will be running over 2 days, 19-20 March 2018. The entire workshop will be hosted in the <a href='https://goo.gl/maps/fvyXk52TuQ22'>Mater Dei Hospital</a>.<p></p> For users who are completely unfamiliar with the use of R, we recommend to prepare the basics by completing the free introduction session provided on <a href='https://www.datacamp.com/courses/free-introduction-to-r'>Datacamp</a> or have a look on <a href='https://reconlearn.netlify.com'>RECON learn</a>. As the event approaches we will provide more information on this website and directly to registered participants.</p>"
+  description = "<p>This two-days short course, co-organised by the R Epidemics Consortium (<a href='http://www.repidemicsconsortium.org/'>RECON</a>) and the EPIET Alumni Network (<a href='http://epietalumni.net'>EAN</a>), will provide an introduction to outbreak analysis using the R software. It will take place in the <a href='https://goo.gl/maps/fvyXk52TuQ22'>Mater Dei Hospital</a> Malta, 19-20 March 2018, as a satellite event to the <a href='https://www.escaide.eu/en'>ESCAIDE</a> conference. The workshop will be aimed at people currently undertaking, or having recently completed, a field-epidemiology training programme (FETP), with some interest in epidemics analysis using R. Participants will get an overview and gain practical experience of new packages for outbreak analysis developed by <a href='http://www.repidemicsconsortium.org/'>RECON</a>, including descriptive approaches (epicurves), short-term forecasting, or automated sitrep generation. While the course will be pitched at a beginner level, we strongly recomment that participants revise R basics by completing the free introduction session provided on <a href='https://www.datacamp.com/courses/free-introduction-to-r'>Datacamp</a>. Applications should be sent using the providing form (see 'Register' tab above).</p>"
   # [[params.services.item]]
   #   icon = "icon-present"
   #   title = "Web Development"
@@ -93,7 +93,7 @@ title = "RECON and EAN workshop: R for outbreak analytics"
     weight = 2
     name = "date"
     title = "Date"
-    subtitle = "The event will take place accross two days, Monday the 19th - and Tuesday the 20th of November 2018, exact times will be announced later on"
+    subtitle = "The event will take place accross two days, Monday the 19th - and Tuesday the 20th of November 2018, exact times will be announced closer to the event."
     description = ""
 
   [[params.mission.item]]
@@ -101,7 +101,7 @@ title = "RECON and EAN workshop: R for outbreak analytics"
     name = "register"
     title = "Register"
     subtitle = ""
-    description = '<p>Please <em>use the google form</em> below to apply, or follow <a href="https://goo.gl/forms/q4JPcu8c1BMmInN63">this link</a> to open the form in a new page. Attendance will depend on availability and will be confirmed at a later stage, as soon as participation slots are full, we will close registration. </p><p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDjxHZShQvjplazC-qM_uN2PKOF9akCAkCS7nQujh2wkrLZA/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></p>'
+    description = '<p>Please <em>use the google form</em> below to apply, or follow <a href="https://goo.gl/forms/q4JPcu8c1BMmInN63">this link</a> to open the form in a new page. Attendance will depend on availability and will be confirmed at a later stage. As soon as participation slots are full, we will close registration. </p><p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDjxHZShQvjplazC-qM_uN2PKOF9akCAkCS7nQujh2wkrLZA/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></p>'
  
   [[params.mission.item]]
     weight = 4
@@ -115,8 +115,8 @@ title = "RECON and EAN workshop: R for outbreak analytics"
     weight = 5
     name = "programme"
     title = "Programme"
-    subtitle = "What is on the menu for this workshop?"
-    description = "The final programme will be announced soon. Depending on the preference of the participants it could include; a short introduction into R, forecasting, GIS analyses in R and automated report generation. (due to limited time available for this workshop we will select a few subjects based on the preference of participants)"
+    subtitle = "What is on the menu?"
+    description = "The final programme of the short course will be published on this website soon. Upon registration, applicants are asked for their preferences in terms of content out of: R basics, epidemic curves, estimation of transmissibility, short-term incidence forecasting, GIS, automated report generation."
 
 
 # [[params.mission.item]]
@@ -175,8 +175,8 @@ title = "RECON and EAN workshop: R for outbreak analytics"
 
   [[params.team.item]]
     name = "Thibaut Jombart"
-    position = "Lecturer, Imperial College London, UK"
-    description = "Outbreak response analytics and head of RECON.<br><br>"
+    position = "Associate Professor, London School of Hygiene and Tropical Medicine / Imperial College London, UK"
+    description = "Outbreak response analytics and head of RECON.<br>"
     img = "images/thibaut.jpg"
     # dribbble = "#"
     github = "https://github.com/thibautjombart"
