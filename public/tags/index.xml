@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on RECON and EAN workshop: R for outbreak analytics</title>
-    <link>/tags/</link>
+    <link>https://recon-malta-2018.netlify.com/tags/</link>
     <description>Recent content in Tags on RECON and EAN workshop: R for outbreak analytics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-AU</language>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://recon-malta-2018.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
