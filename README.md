@@ -23,5 +23,4 @@ case it is really quite optional. Once you clone the repository, the workflow sh
    `git commit -a -m "your message here"` and push the changes onto the server
    (`git push origin master`, or usually `git push` will suffice).
    
-4. check the result online; the website is temporarily hosted at
-   [https://unruffled-jepsen-ad1491.netlify.com/](https://unruffled-jepsen-ad1491.netlify.com/)
+4. check the result online; the website is deployed at [https://recon-malta-2018.netlify.com/](https://recon-malta-2018.netlify.com/)
