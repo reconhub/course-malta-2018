@@ -101,7 +101,8 @@ title = "RECON and EAN workshop: R for outbreak analytics"
     name = "register"
     title = "Register"
     subtitle = ""
-    description = '<p>Please use the google form below to apply, or follow <a href="https://goo.gl/forms/q4JPcu8c1BMmInN63">this link</a> to open the form in a new page. Attendance will depend on availability and will be confirmed at a later stage. As soon as participation slots are full, new applicants will be added to a reserve list. Due to holidays on our side, responses upon registration are delayed till mid-August </p><p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDjxHZShQvjplazC-qM_uN2PKOF9akCAkCS7nQujh2wkrLZA/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></p>'
+    description = "Registrations have now been closed, at current there is a waiting list. Check the RECON site for future events, or contact RECON if you are interest in organising an event with us"
+    #description = '<p>Please use the google form below to apply, or follow <a href="https://goo.gl/forms/q4JPcu8c1BMmInN63">this link</a> to open the form in a new page. Attendance will depend on availability and will be confirmed at a later stage. As soon as participation slots are full, new applicants will be added to a reserve list. Due to holidays on our side, responses upon registration are delayed till mid-August </p><p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDjxHZShQvjplazC-qM_uN2PKOF9akCAkCS7nQujh2wkrLZA/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></p>'
  
   [[params.mission.item]]
     weight = 4
@@ -173,28 +174,72 @@ title = "RECON and EAN workshop: R for outbreak analytics"
   title = "Organisers"
   description = "Organising members and facilitators"
 
-  [[params.team.item]]
-    name = "Thibaut Jombart"
-    position = "Associate Professor, London School of Hygiene and Tropical Medicine / Imperial College London, UK"
-    description = "Outbreak response analytics and head of RECON.<br>"
-    img = "images/thibaut.jpg"
-    # dribbble = "#"
-    github = "https://github.com/thibautjombart"
-    twitter = "https://twitter.com/TeebzR"
+name = "Thibaut Jombart"
+position = "Associate Professor, London School of Hygiene and Tropical Medicine / Imperial College London, UK"
+description = "Facilitator - Outbreak response analytics and head of RECON<br>"
+img = "images/thibaut.jpg"
+# dribbble = "#"
+github = "https://github.com/thibautjombart"
+twitter = "https://twitter.com/TeebzR"
 
-  [[params.team.item]]
-    name = "Amrish Baidjoe"
-    position = "Research Associate, Imperial College London, UK"
-    description = "Field epidemiologist/microbiologist and coordinator of RECON, president of the EPIET Alumni Network."
-    img = "images/amrish.jpg"
-    github = "https://github.com/AmmerB"
-    twitter = "https://twitter.com/Ammer_B"
+[[params.team.item]]
+name = "Amrish Baidjoe"
+position = "Research Associate, Operational Outbreak Consultant, Imperial College London, UK"
+description = "Facilitator - Field epidemiologist/microbiologist and coordinator of RECON, president of the EPIET Alumni Network"
+img = "images/amrish.jpg"
+github = "https://github.com/AmmerB"
+twitter = "https://twitter.com/Ammer_B"
 
-  [[params.team.item]]
-    name = "Lieke van Alphen"
-    position = "Molecular Medical Microbiologist, MUMC, NL"
-    description = "Providing logistics support on behalf of EAN, EAN treasurer"
-    img = "images/lieke.jpeg"
+[[params.team.item]]
+name = "Zhian Kamvar"
+position = "Research Associate, Imperial College London, UK"
+description = "Facilitator - R developer and population geneticist; core developer and trainer for RECON"
+img = "images/zhian.jpg"
+github = "https://github.com/zkamvar"
+twitter = "https://twitter.com/zkamvar"
+    
+[[params.team.item]]
+name = "Alex Spina"
+position = "R-outbreak Analytics Consultant" 
+description = "Course Facilitator - #Rstats"
+img = "images/alex.jpg"
+
+[[params.team.item]]
+name = "Patrick Keating"
+position = "Data Scientist at the London School of Hygiene and Tropical Medicine" 
+description = "Course Facilitator - Member of the UK-Public Health Rapid Response Team"
+img = "images/patrick.jpg"
+"https://twitter.com/patrickbkeating"
+   
+[[params.team.item]]
+name = "Finlay Campbell"
+position = "PhD Student, , Imperial College London, UK" 
+description = "Course Facilitator - Developing methods and tools for inferring transmission during outbreaks"
+img = "images/finlay.jpg"
+
+[[params.team.item]]
+name = "Janetta Skarp"
+position = "Postgraduate student, Imperial College London" 
+description = "Course Facilitator - Infectious disease modelling"
+img = "images/janetta.jpg"
+
+[[params.team.item]]
+name = "Claire Thomson"
+position = "Administrative support, Imperial College London, UK" 
+description = "Providing logistics support on behalf of Imperial College"
+img = "images/claire.jpg"
+
+[[params.team.item]]
+name = "Lieke van Alphen"
+position = "Molecular Medical Microbiologist, MUMC, NL"
+description = "Providing logistics support on behalf of EAN, EAN treasurer"
+img = "images/lieke.jpg"
+
+[[params.team.item]]
+name = "Chris Barbara"
+position = "Chairman of the Pathology Department, Mater Dei Hospital, Malta" 
+description = "Chris made it possible to host us at Malta"
+img = "images/chris.jpg"
 
 #add following members: facilitators, admin support, Chris Barbara
 
