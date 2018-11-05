@@ -210,7 +210,7 @@ name = "Patrick Keating"
 position = "Data Scientist at the London School of Hygiene and Tropical Medicine" 
 description = "Course Facilitator - Member of the UK-Public Health Rapid Response Team"
 img = "images/patrick.jpg"
-"https://twitter.com/patrickbkeating"
+twitter = "https://twitter.com/patrickbkeating"
    
 [[params.team.item]]
 name = "Finlay Campbell"
